@@ -42,10 +42,10 @@ second_href = WebDriverWait(driver, 10).until(
 links = driver.find_elements(By.CSS_SELECTOR, "tbody tr td a")
 
 # Ouvrir un fichier CSV pour écrire les données
-with open('resultats_fr.csv', mode='wb') as file:
+with open('resultats_en.csv', mode='wb') as file:
     file.write('\ufeff'.encode('utf-8'))
 
-with open('resultats_fr.csv', mode='a', newline='', encoding='utf-8') as file:
+with open('resultats_en.csv', mode='a', newline='', encoding='utf-8') as file:
     writer = csv.writer(file, delimiter=';', quoting=csv.QUOTE_MINIMAL)
     # Écrire l'en-tête
     # writer.writerow(['Word', 'EN title', 'EN Indication', 'EN Definition'])
